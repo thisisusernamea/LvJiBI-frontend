@@ -1,4 +1,9 @@
 declare namespace API {
+  type addUsingPOSTParams = {
+    /** name */
+    name?: string;
+  };
+
   type BaseResponseBIResponse_ = {
     code?: number;
     data?: BIResponse;
@@ -90,6 +95,7 @@ declare namespace API {
   };
 
   type BIResponse = {
+    chartId?: number;
     genChart?: string;
     genResult?: string;
   };
@@ -98,12 +104,14 @@ declare namespace API {
     chartData?: string;
     chartType?: string;
     createTime?: string;
+    execMsg?: string;
     genChart?: string;
     genResult?: string;
     goal?: string;
     id?: number;
     isDelete?: number;
     name?: string;
+    status?: number;
     updateTime?: string;
     userId?: number;
   };
@@ -150,6 +158,12 @@ declare namespace API {
 
   type DeleteRequest = {
     id?: number;
+  };
+
+  type genChartByAiAsyncUsingPOSTParams = {
+    chartType?: string;
+    goal?: string;
+    name?: string;
   };
 
   type genChartByAiUsingPOSTParams = {

@@ -5,7 +5,8 @@ export default [
     routes: [{ name: '登录', path: '/user/login', component: './User/Login' }],
   },
   { path: '/', redirect:'/add_chart'},
-  { path: '/add_chart', name: '智能分析', icon: 'barChart', component: './AddChart' },
+  { path: '/add_chart', name: '同步智能分析', icon: 'barChart', component: './AddChart' },
+  { path: '/add_chart_async', name: '异步智能分析', icon: 'barChart', component: './AddChartAsync' },
   { path: '/my_chart', name: '我的图表', icon: 'pieChart', component: './MyChart' },
   {
     path: '/admin',
